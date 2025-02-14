@@ -1,0 +1,151 @@
+/* Estilos generales */
+body { 
+    text-align: center;
+    font-style: italic;
+    background-color: #ffe6f2;
+    color: #d81b60;
+    padding: 20px; /* Reducir el padding para móviles */
+    overflow: hidden;
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+    font-size: 16px; /* Tamaño base para móviles */
+}
+
+/* Ajustes para el título */
+h1 {
+    font-size: 24px; /* Tamaño más pequeño para móviles */
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilos para el botón */
+button {
+    background-color: #ff4081;
+    font-style: italic;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Padding más pequeño para móviles */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+    margin-top: 20px; /* Espaciado superior */
+}
+
+button:hover {
+    background-color: #c2185b;
+    transform: scale(1.1);
+}
+
+/* Contenedor de tulipanes */
+.tulip-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Estilos para los tulipanes */
+.tulip {
+    position: absolute;
+    width: 80px; /* Tamaño más pequeño para móviles */
+    height: 80px; /* Tamaño más pequeño para móviles */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall 4s linear forwards;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Contenedor de la imagen de Tati */
+.tati3-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio más pequeño para móviles */
+    display: none;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Ajustes para las imágenes dentro del contenedor */
+.tati3-container img {
+    width: 150px; /* Tamaño más pequeño para móviles */
+    height: auto;
+}
+
+/* Ajustes para los GIFs */
+.gift-left, .gift-right {
+    width: 100px; /* Tamaño más pequeño para móviles */
+    height: auto;
+}
+
+/* Estilos para el mensaje */
+.mensaje {
+    font-size: 1.5em; /* Tamaño más pequeño para móviles */
+    color: #d81b60;
+    margin-top: 10px; /* Espaciado más pequeño */
+    font-weight: bold;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Media queries para pantallas más grandes (tablets y desktops) */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; /* Tamaño de fuente más grande para tablets y desktops */
+        padding: 50px; /* Padding más grande */
+    }
+
+    h1 {
+        font-size: 40px; /* Tamaño de fuente más grande */
+    }
+
+    button {
+        padding: 15px 30px; /* Padding más grande */
+        font-size: 20px; /* Tamaño de fuente más grande */
+    }
+
+    .tulip {
+        width: 120px; /* Tamaño más grande para tulipanes */
+        height: 120px;
+    }
+
+    .tati3-container img {
+        width: 200px; /* Tamaño más grande para imágenes */
+    }
+
+    .gift-left, .gift-right {
+        width: 150px; /* Tamaño más grande para GIFs */
+    }
+
+    .mensaje {
+        font-size: 2em; /* Tamaño más grande para el mensaje */
+    }
+}
+
